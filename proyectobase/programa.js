@@ -1,0 +1,1 @@
+document.getElementById('bienvenida').innerHTML="hola mundo";
