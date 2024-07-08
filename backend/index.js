@@ -115,11 +115,11 @@ const User = mongoose.model('User', userSchema)
 
 /************ */
 //Crear nuevo usuario
-app.post('/crearUsuario',validacionFormulario, async(req,res)=>{
+app.post('/crearRegistro',validacionFormulario, async(req,res)=>{
   const nombre = req.body.nombre
   const correo = req.body.email
   const contrasena = req.body.password
-  const user = new User({nombre: nombre, correo: correo, congtrasena: contrasena});
+  const user = new User({nombre: nombre, correo: correo, contrasena: contrasena});
   try{
   await user.save()
   res.send('Usuario creado')
